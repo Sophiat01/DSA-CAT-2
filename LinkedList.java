@@ -9,7 +9,7 @@ class LinkedList{
         }
     }
 
-    private Node haed;
+    private Node head;
 
     //insert node at beginning
     public void insertAtBeginning(int data){
@@ -45,6 +45,11 @@ class LinkedList{
     public void display(){
         if(head == null){
             System.out.println("Empty list.");
+            return;
+        }
+        Node temp = head;
+        while(temp != null){
+            System.out.println(temp.data +"->");
             temp = temp.next;
         }
         System.out.println("null");
